@@ -1,0 +1,185 @@
+body {
+  font-family: "arial";
+  background-color: burlywood;
+}
+
+
+#welcome-section {
+  width: 100vw;
+  height:100vh;
+  position: relative;
+  background-color: burlywood;
+  margin-left:-10px;
+  top: 40px;
+  padding: 0rem 2rem;
+}
+
+#welcome-header {
+  display: block;
+  position: relative;
+  top: 30vh;;
+  left: 25px;
+  color: white;
+  font-size: 1.75rem;
+  opacity: 0%;
+  animation-name: solidify-header;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes solidify-header {
+  100% {
+    opacity: 100%;
+  }
+}
+
+#welcome-text {
+  display: block;
+  position: relative;
+  top: 30vh;
+  left: 25px;
+  color: white;
+  font-size: 2rem;
+  order: 2;
+  opacity: 0%;
+  animation-name: solidify-text;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes solidify-text {
+  0% {
+    opacity: 0%;
+  }
+  30% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+#navbar {
+  display: block;
+  position: fixed;
+  top: 0px;
+  background-color: white;
+  opacity: 75%;
+  width: 100vw;
+  left:0rem;
+  height: 80px;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+ul li {
+  display: inline-block;
+  font-size: 1.75rem;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 10px;
+  margin-bottom:10px;
+  opacity: 100%;
+}
+
+a.nav-link:link {
+  text-decoration: none;
+  color: peru;
+}
+a.nav-link:hover {
+  animation-name: in;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes in{
+  100% {
+    font-size: 2rem;
+  }
+}
+
+@keyframe out{
+  from: transform: rotate(360deg);
+  to: transform: rotate(0deg);
+}
+
+a.nav-link:visited {
+  text-decoration: none;
+  color: peru;
+}
+
+#projects {
+  display: grid;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10rem 2rem;
+  background-color: burlywood;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+}
+
+.project-tile {
+  background-color: white;
+  opacity: 75%;
+  text-align: center;
+  min-height: 300px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);  
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+.project-title {
+  color: burlywood;
+}
+
+a.tile-link:link {
+  text-decoration: none;
+  color: burlywood;
+  font-size: 1.25rem;
+}
+a.tile-link:hover {
+  animation-name: enlarge-tile;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes enlarge-tile{
+  100% {
+    transform: scale(0.9);
+  }
+}
+#contact {
+  height: 20rem;
+  text-align: center;
+  color: white;
+}
+
+#connect {
+  font-size: 3rem;
+}
+
+#email {
+   display: inline-block;
+   font-size: 1.25rem;
+   color: mediumblue;
+   text-decoration: none;
+}
+
+#profile-link {
+   display: inline-block;
+   font-size: 1.25rem;
+   color: mediumblue;
+   text-decoration: none;
+  }
+
+@media (max-width: 800px) {
+  #welcome-header {
+    font-size: 1.25rem;
+  }
+  #welcome-text {
+    font-size: 1.25rem;
+  }
+}
